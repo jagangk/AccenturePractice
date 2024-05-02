@@ -1,14 +1,11 @@
-num = int(input('enter the range: '))
-n1 = 0
-n2 = 1
-if num <= 0:
-    print('enter a valid number!')
-elif num == 1:
-    print(f'Fibonacci series: {num}')
+num = str(input('enter the number: '))
+int_num = int(num)
+sum = 0
+while int_num > 0:
+    digit = int_num % 10
+    sum += digit ** len(num)
+    int_num //= 10
+if sum == int(num):
+    print('armstrong number')
 else:
-    print('fibonacci series:', n1, n2, end=" ")
-    for i in range(2,num):
-        n3 = n1 + n2
-        n1 = n2
-        n2 = n3
-        print(n3, end=" ")
+    print('no')
