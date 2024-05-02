@@ -1,4 +1,14 @@
-N = int(input("plz enter a number: "))
-binary_num = bin(N)[2:]
-toggled_bit = ''.join('1' if bit == '0' else '0' for bit in binary_num)
-print(int(toggled_bit, 2))
+num = int(input('enter the range: '))
+n1 = 0
+n2 = 1
+if num <= 0:
+    print('enter a valid number!')
+elif num == 1:
+    print(f'Fibonacci series: {num}')
+else:
+    print('fibonacci series:', n1, n2, end=" ")
+    for i in range(2,num):
+        n3 = n1 + n2
+        n1 = n2
+        n2 = n3
+        print(n3, end=" ")
