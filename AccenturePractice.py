@@ -8,4 +8,4 @@ while int_num > 0:
 if sum == int(num):
     print('armstrong number')
 else:
-    print('no')
+    print('not an armstrong number')
